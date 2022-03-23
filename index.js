@@ -91,11 +91,11 @@ function Car(model, milesPerGallon) {
   
 } //something not quite right here
 Car.prototype.fill = function(gallons){
-   this.tank = gallons;
+   this.tank = this.tank + gallons;
    return this.tank;
 }
-const batmobile = new Car({model: 'Toyota', milesPerGallon: 35});
-batmobile.fill(20);
+const car1 = new Car({model: 'Toyota', milesPerGallon: 35});
+car1.fill(20);
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
